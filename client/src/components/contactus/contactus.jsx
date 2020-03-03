@@ -19,7 +19,7 @@ class Contactus extends React.Component{
 	handleSubmit=event=>{
 		this.setState({status:'Success'});
 		//Data conneciton
-	    fetch('http://localhost:3001/send', {
+	    fetch('/send', {
 	    	method:'POST',
 	    	headers: {'content-Type':'application/json'},
 	    	body: JSON.stringify({
