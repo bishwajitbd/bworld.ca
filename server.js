@@ -23,24 +23,24 @@ var smtpTransport = nodemailer.createTransport({
   port: 465,
   auth: {
     user: 'bworldcanada',
-    pass: 'Barua1990'
+    pass: 'ManasKumarBarua1990@#Bishakha'
   }
 });
 
 var mailOptions = {
   from: data.email,
   to: 'bworldcanada@gmail.com, bishwajitbd@gmail.com',
-  subject: 'Test subject',
+  subject: 'Client response',
   html: `<p>${data.fullname}</p>
           <p>${data.email}</p>
           <p>${data.message}</p>`
 };
 
-var mailOptions3 = {
+var mailResponse = {
   from:'bworldcanada@gmail.com',
   to:  data.email,
-  subject: 'Thank you for contact us. ',
-  html: `<p>Hello ${data.fullname}, Thank you for contact us. We will contact in a short time.</p>
+  subject: 'Thank you',
+  html: `<p>Hello ${data.fullname}, Thank you for contact us. We will contact you in a short time.</p>
           <p>${data.email}</p>
           <p>${data.message}</p>`
 };
@@ -50,7 +50,7 @@ smtpTransport.sendMail(mailOptions,
   if(error) {
     res.send(error)
   }else {
-    smtpTransport.sendMail(mailOptions3,
+    smtpTransport.sendMail(mailResponse,
     (error, response) => {
       if(error) {
         res.send(error)
