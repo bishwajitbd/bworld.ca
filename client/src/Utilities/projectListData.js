@@ -19,7 +19,7 @@ export const projectListData=[
 		github:'https://github.com/bishwajitbd/bworldca',
 		liveLink:'https://bworldca.herokuapp.com/',
 		liveLinkTitle: 'Hosted',
-		projectdemo:'https://www.youtube.com/watch?v=2cQHvZliN7o',
+		projectdemo:'https://www.youtube.com/watch?v=R0OFWsVdhWo',
 		projectdemoTitle: 'Demo',
 		tools: 'React, Express.js, Nodemailer, react-mdl, react-router-dom, font awesome and more.',
 		projectAll:1
