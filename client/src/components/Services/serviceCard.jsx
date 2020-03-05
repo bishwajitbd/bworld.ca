@@ -1,15 +1,20 @@
 import React from 'react';
 
-//import './services.css';
+import './serviceCards.scss';
 
 const ServiceCard=(props)=>{
 	return(
-		<div className='container'>
-				<div className='card'>
-				<img alt='logo' src={props.imagelink} height="50%" width="100%"/>
-				<p><b>{props.title}</b></p>
-				<p>{props.summary}</p>
+		<div className='service-container'>
+			<div className='service-card'>
+				<div className='imgBox'>
+					<img alt='logo' src={props.imagelink} />
+					<h3>{props.title}</h3>
 				</div>
+				<div className='service-content'>
+					<p>{props.summary}</p>
+					<a href="/#">Read More</a>
+				</div>
+			</div>
 		</div>
 	);
 }

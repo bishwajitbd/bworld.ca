@@ -9,9 +9,8 @@ class Services extends Component{
 		return(
 			<div>
 			<h2>Our Services</h2>
-			<hr/>
 			<div>
-		        <Content className='content-style'>
+		        <Content className='content-views'>
 		            <ServiceCardList feedingData={feedingData} />
 		        </Content>
 		    </div>
