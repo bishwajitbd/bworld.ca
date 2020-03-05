@@ -8,10 +8,10 @@ const ServiceCard=(props)=>{
 			<div className='service-card'>
 				<div className='imgBox'>
 					<img alt='logo' src={props.imagelink} />
-					<h3>{props.title}</h3>
+					<p className='service-title'>{props.title}</p>
 				</div>
 				<div className='service-content'>
-					<p>{props.summary}</p>
+					<p className='service-description'>{props.summary}</p>
 					<a href="/#">Read More</a>
 				</div>
 			</div>
