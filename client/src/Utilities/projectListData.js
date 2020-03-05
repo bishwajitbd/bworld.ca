@@ -16,7 +16,7 @@ export const projectListData=[
 		projectTite:'My potfolio based website',
 		imagelink:reactExpress,
 		summary:'This website based on my potfolio and business exposure.',
-		github:'https://github.com/bishwajitbd/bworldca',
+		github:'https://github.com/bishwajitbd/bworld.ca',
 		liveLink:'https://bworldca.herokuapp.com/',
 		liveLinkTitle: 'Hosted',
 		projectdemo:'https://www.youtube.com/watch?v=R0OFWsVdhWo',
