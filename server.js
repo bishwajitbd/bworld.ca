@@ -68,12 +68,12 @@ smtpTransport.sendMail(mailOptions,
 })
 
 //get services list
-app.get('/services', (req, res)=>{
+app.get('/servicesdata', (req, res)=>{
   res.send(services.services);
 });
 
 //get project list
-app.get('/projects', (req, res)=>{
+app.get('/projectsdata', (req, res)=>{
   res.send(projects.projects);
 });
 

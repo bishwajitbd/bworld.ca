@@ -13,7 +13,7 @@ class Projects extends Component{
 		};
 	}
 	componentDidMount(){
-		fetch('/projects')
+		fetch('/projectsdata')
 		.then(response=>response.json())
 		.then(projects=> this.setState({projectlist:projects}));
 	}

@@ -14,7 +14,7 @@ constructor(){
 }
 
 componentDidMount(){
-	fetch('/services')
+	fetch('/servicesdata')
 	.then(response=>response.json())
 	.then(services=> this.setState({servicelist:services}));
 }
