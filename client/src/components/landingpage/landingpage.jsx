@@ -1,16 +1,14 @@
 import React from 'react';
 import Contactus from '../../components/contactus/contactus';
 import './landingpage.scss';
-import {feedingData} from '../../Utilities/feedingData';
-import ServiceCardList from '../../components/Services/serviceCardList';
+import Services from '../../components/Services/services';
 
 const Landingpage=()=>{
 	return (
 		<div>
 			<div className="split left">
 			  <div className="centered">
-			  <h3>Our services</h3>
-			  	<ServiceCardList feedingData={feedingData} />
+			  	<Services />
 			  </div>
 			</div>
 			<div className="split right">
