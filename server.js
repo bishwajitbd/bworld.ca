@@ -67,16 +67,6 @@ smtpTransport.sendMail(mailOptions,
 
 })
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
-    
-  // Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-};
-
 //get services list
 app.get('/services', (req, res)=>{
   res.send(services.services);
@@ -88,3 +78,14 @@ app.get('/projects', (req, res)=>{
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+    
+  // Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+};
+
