@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navigation } from 'react-mdl';
+import './navigationmenu';
 
 const Navigationmenu=()=>
 <div>
-    <Navigation>
+    <Navigation className="navbar">
         <a href="/">Home</a>
         <a href="/services">Services</a>
         <a href="/customer">Client area</a>

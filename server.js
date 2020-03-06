@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const services = require('./allData/services');
+const projects = require('./allData/projectListData');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -73,6 +75,16 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
-}
+};
+
+//get services list
+app.get('/services', (req, res)=>{
+  res.send(services.services);
+});
+
+//get project list
+app.get('/projects', (req, res)=>{
+  res.send(projects.projects);
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

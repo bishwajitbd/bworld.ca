@@ -17,7 +17,7 @@ class Contactus extends React.Component{
 	}
 
 	handleSubmit=event=>{
-		this.setState({status:'Success'});
+		this.setState({status:'Email sent.'});
 		//Data conneciton
 	    fetch('/send', {
 	    	method:'POST',

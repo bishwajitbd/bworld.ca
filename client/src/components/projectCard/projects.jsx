@@ -1,26 +1,30 @@
 import React, {Component} from 'react';
 import {Tabs, Tab, Grid, Cell} from 'react-mdl';
 import {Content} from 'react-mdl';
-import {projectListData} from '../../Utilities/projectListData';
 import ProjectList from './projectList';
+import ProjectListAll from './projectListAll';
 
 class Projects extends Component{
 	constructor(props){
 		super(props);
-		this.state={activeTab:7};
+		this.state={
+			activeTab:7,
+			projectlist:[]
+		};
 	}
+	componentDidMount(){
+		fetch('/projects')
+		.then(response=>response.json())
+		.then(projects=> this.setState({projectlist:projects}));
+	}
+
 	toggleCategories(){
-		if(this.state.activeTab===7){			        
+		const projectList=this.state.projectlist;
+		if(this.state.activeTab===7){	
 			return(
 				<div>
 			        <Content>
-			            <ProjectList projectListData={projectListData} activeTab={1} />
-			            <ProjectList projectListData={projectListData} activeTab={2} />
-			            <ProjectList projectListData={projectListData} activeTab={7} />
-			            <ProjectList projectListData={projectListData} activeTab={3} />
-			            <ProjectList projectListData={projectListData} activeTab={5} />
-			            <ProjectList projectListData={projectListData} activeTab={4} />
-			            <ProjectList projectListData={projectListData} activeTab={6} />
+			            <ProjectListAll projectListData={projectList}/>
 			        </Content>
 				</div>
 			)
@@ -28,7 +32,7 @@ class Projects extends Component{
 			return(
 			<div>
 		        <Content>
-		            <ProjectList projectListData={projectListData} activeTab={this.state.activeTab+1} />
+		            <ProjectList projectListData={projectList} activeTab={this.state.activeTab+1} />
 		        </Content>
 			</div>
 			)
