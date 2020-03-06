@@ -12,12 +12,12 @@ const Contact=()=>{
 	<div>
 	<div className="profileCard">
 	<img src={Image} alt="Bishwajit" width="100%"/>
-	  <h3>Bishwajit Barua</h3>
-	  <p className="title">Full Stack Developer</p>
-	  <a href="http://bworld.ca/" target="_blank" rel="noopener noreferrer">bworld.ca</a>
+	  <h4>Bishwajit Barua</h4>
 	  <a href={githubAddress} target="_blank" rel="noopener noreferrer"><i className="fa fa-github">&nbsp;</i></a>
 	  <a href={linkedinAddress} target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin">&nbsp;</i></a>
 	  <a href={emailAddres} target="_blank" rel="noopener noreferrer"><i className="fa fa-envelope">&nbsp;</i></a>
+	  <p className="title">Full Stack Developer</p>
+	  <a href="http://bworld.ca/" target="_blank" rel="noopener noreferrer">bworld.ca</a>
 	  <hr /><Link to="/" className='linkpage'>CONNECT</Link><br /><br />
 	</div><br />
 	</div>
