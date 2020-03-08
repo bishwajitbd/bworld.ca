@@ -1,35 +1,12 @@
 .card-list2{
-	width: 60vw;
+	width: 100vw;
 	margin: 0 auto;
-	display: flex;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 0px;
+	display:flex;
 }
 
-.container{
-  position: relative;
-  width: 250px;
-  height: 320px;
-  border-radius: 50px;
+@media screen and (max-width: 600px) {
+.card-list2{
+  display:table-footer-group;
+  }
 }
 
-.card{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility:hidden;
-  background:#ffc728;
-  color:#333;
-  text-align: center;
-  font-family: 'zilla slab', sans-serif;
-  border-radius: 10px 50px;
-  font-size: 18px;
-  font-weight: bold;
-  border: 1px solid red;
-  border-radius: 00px;
-}
-
-.content-views
-{
-  font-size:0.5vw;
-}

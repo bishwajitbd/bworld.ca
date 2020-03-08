@@ -6,14 +6,17 @@ import Services from '../../components/Services/services';
 const Landingpage=()=>{
 	return (
 		<div>
-			<div className="split left">
-			  <div className="centered">
-			  	<Services />
+			<div className="split up">
+			  <div className="left">
+				<Contactus />
+			  </div>
+			  <div className="left">
+				
 			  </div>
 			</div>
-			<div className="split right">
-			  <div className="centered">
-				<Contactus />
+			<div className="split down">
+			  <div className="left">
+			  	<Services />
 			  </div>
 			</div>
 		</div>

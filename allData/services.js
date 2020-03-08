@@ -3,7 +3,7 @@ module.exports.services=[
 		id:1,
 		title:'Software Development',
 		imagelink:'https://img1.ibay.com.mv/is1/full/2017/01/item_1740361_236.png',
-		summary:'Develop software according to your requirement using Microsoft Access and SQL Server.',
+		summary:'Develop software according to your requirement using Microsoft Access, SQL Server ‍and Web development.',
 		desciption:'Develop software according to your requirement.'
 	},
 	{
