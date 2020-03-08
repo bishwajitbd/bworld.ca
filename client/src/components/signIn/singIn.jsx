@@ -16,6 +16,9 @@ class SingIn extends React.Component{
 	handleSubmit=event=>{
 		this.setState({email:'', password:''})
 	}
+	handleChange=event=>{
+		const {value, name}=event.target;
+	}
 
 	render(){
 		return(
@@ -28,12 +31,14 @@ class SingIn extends React.Component{
 						name='email' 
 						type='email' 
 						value={this.state.email} 
+						handleChange={this.handleChange}
 						label='Email'
 						required/>
 					<FromInput 
 						name='password'  
 						type='password' 
 						value={this.state.password} 
+						handleChange={this.handleChange}
 						label='Password'
 						required />
 		          <div className='buttons'>

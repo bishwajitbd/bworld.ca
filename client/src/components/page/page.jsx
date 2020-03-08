@@ -4,17 +4,19 @@ import WebHeader from '../../components/header/header';
 import Main from '../../main';
 import './page.scss';
 import WebFooter from '../../components/footer/footer';
+//import Logo from '../../images/bworldLogo.svg';
+import Logo from './logo';
 
 const Page=()=>
 <div>
     <div>
         <Layout>
-            <Header title="bworld.ca" scroll>
+            <Header title=<Logo />  scroll>
                 <WebHeader />
             </Header>
-            <Drawer title="bworld.ca">
+            <Drawer title=<Logo />>
                 <WebHeader />
-            </Drawer>
+            </Drawer> 
             <Content>
                 <div className="page-content" />
                 <br />
