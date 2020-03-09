@@ -38,7 +38,7 @@ class Page extends React.Component{
                             <WebHeader currentUser={this.state.currentUser} />
                         </Header>
                         <Drawer title=<Logo />>
-                            <WebHeader />
+                            <WebHeader currentUser={this.state.currentUser} />
                         </Drawer> 
                         <Content>
                             <div className="page-content" />

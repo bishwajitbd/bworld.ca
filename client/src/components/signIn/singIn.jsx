@@ -3,6 +3,7 @@ import FromInput from '../../components/form-input/form-input';
 import CustomButton from '../../components/custom-button/custom-button';
 import {singInWithGoogle} from '../../firebase/firebase.util';
 import './singIn.scss';
+import { Link } from 'react-router-dom';
 
 
 class SingIn extends React.Component{
@@ -55,5 +56,7 @@ class SingIn extends React.Component{
 }
 
 export default SingIn;
+
+
 
 

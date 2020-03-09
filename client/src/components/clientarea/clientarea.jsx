@@ -1,7 +1,6 @@
 import React from 'react';
 import {auth} from '../../firebase/firebase.util';
 import './clientarea.scss';
-import { Redirect } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 const signout=()=>{
