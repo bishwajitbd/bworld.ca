@@ -9,4 +9,8 @@
   display:table-footer-group;
   }
 }
-
+.servicetitle{
+	font-size: 3vh;
+	text-align: left;
+	font-weight: bold;
+}

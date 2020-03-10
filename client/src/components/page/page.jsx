@@ -4,7 +4,6 @@ import WebHeader from '../../components/header/header';
 import Main from '../../main';
 import './page.scss';
 import WebFooter from '../../components/footer/footer';
-//import Logo from '../../images/bworldLogo.svg';
 import Logo from './logo';
 import {auth} from '../../firebase/firebase.util';
 

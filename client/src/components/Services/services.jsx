@@ -22,7 +22,7 @@ componentDidMount(){
 	render(){
 		return(
 			<div>
-			<h2>Our Services</h2>
+			<p className='servicetitle'>Services</p>
 			<div>
 		        <Content className='content-views'>
 		            <ServiceCardList feedingData={this.state.servicelist} />

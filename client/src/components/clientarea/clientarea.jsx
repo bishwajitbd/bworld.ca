@@ -3,10 +3,6 @@ import {auth} from '../../firebase/firebase.util';
 import './clientarea.scss';
 import { Link } from 'react-router-dom';
 
-const signout=()=>{
-	//auth.signOut();
-}
-
 const Clientarea=()=>
 	<div>
 	<h1>Client Area </h1>

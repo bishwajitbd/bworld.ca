@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigation } from 'react-mdl';
-import {auth} from '../../firebase/firebase.util';
+//import {auth} from '../../firebase/firebase.util';
 import './header.scss';
 
 const WebHeader=({currentUser})=>
@@ -10,9 +10,9 @@ const WebHeader=({currentUser})=>
         <a href="/services">Services</a>
         {
         	currentUser ?
-        	<a href="/clientarea">{currentUser.displayName}</a>
+        	<a href="/clientarea">{currentUser.displayName.toUpperCase()}</a>
         	:
-         	<a href="/customer">Client area</a>       	
+         	<a href="/customer">CLIENT AREA</a>
         }
         <a href="/tutorials">Tutorials</a>
         <a href="/projects">Projects</a>
