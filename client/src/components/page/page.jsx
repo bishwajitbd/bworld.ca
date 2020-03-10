@@ -5,7 +5,7 @@ import Main from '../../main';
 import './page.scss';
 import WebFooter from '../../components/footer/footer';
 import Logo from './logo';
-import {auth} from '../../firebase/firebase.util';
+import {auth, createUserProfileDocument} from '../../firebase/firebase.util';
 
 class Page extends React.Component{
     constructor(){
@@ -18,9 +18,21 @@ class Page extends React.Component{
     unsubscribeFormAuth=null; 
 
     componentDidMount(){
-        this.unsubscribeFormAuth= auth.onAuthStateChanged(user=>{
-                this.setState({currentUser:user});
-                console.log(user);
+        this.unsubscribeFormAuth= auth.onAuthStateChanged(async userAuth=>{
+                if(userAuth)
+                {
+                    const userRef=await createUserProfileDocument(userAuth);
+                    userRef.onSnapshot(snapShot=>{
+                        this.setState({
+                            currentUser: {
+                                id: snapShot.id,
+                                ...snapShot.data()
+                            }
+                        });
+                        console.log(this.state);
+                    });
+                }
+                this.setState({currentUser:userAuth});
             });
     }
 

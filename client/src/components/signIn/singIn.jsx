@@ -16,7 +16,8 @@ class SingIn extends React.Component{
 		this.setState({email:'', password:''})
 	}
 	handleChange=event=>{
-		//const {value, name}=event.target;
+		const {value, name}=event.target;
+		this.setState({[name]:value});
 	}
 
 	render(){

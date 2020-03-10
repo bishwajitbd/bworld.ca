@@ -10,7 +10,7 @@ const WebHeader=({currentUser})=>
         <a href="/services">Services</a>
         {
         	currentUser ?
-        	<a href="/clientarea">{currentUser.displayName.toUpperCase()}</a>
+        	<a href="/clientarea">{currentUser.displayName}</a>
         	:
          	<a href="/customer">CLIENT AREA</a>
         }
